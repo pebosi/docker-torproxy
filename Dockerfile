@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-RUN apk update && apk add tor
+RUN apk update && apk add --no-cache tor curl
 
 COPY torrc /etc/tor/torrc
 RUN chown -R tor /etc/tor
